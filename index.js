@@ -14,8 +14,9 @@ function onChangeInputValue(event){
 }
 
 function onClickConverter(){
-   conversao = (moeda * ValorAConverter);
+    conversao = (moeda * ValorAConverter);
+    let conversaoDisplay = conversao.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     console.log(conversao);
-    document.getElementById("ValorConvertido").innerHTML = conversao;
+    document.getElementById("ValorConvertido").innerHTML = conversaoDisplay;
 }
      
