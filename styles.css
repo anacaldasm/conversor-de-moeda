@@ -3,6 +3,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    
    
    
 }
@@ -19,8 +20,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align:center;
+    border-radius: 10%;
 }
 
 #ValorConvertido {
     text-align: center;
+    margin-top: 50px;
+    display: block;
+
+
 }
