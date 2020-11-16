@@ -1,9 +1,4 @@
-let moedaEntrada = {};
-let ValorAConverter = 0;
-let conversao = 0;
-let moedaSaida = {};
 
-// adicionar mais tipos de moeda - colocar no select tambem
 const TipodeMoedas = {
 
     Dolar: {
@@ -27,42 +22,40 @@ const TipodeMoedas = {
     },
 
 }
+//adicionando as options ao select no html
+function addCurrenciesToSelect(elementId) {
+    const listaDeMoeads = Object.keys(TipodeMoedas); // pega lista de moedas - chave do map
+    document.getElementById(elementId).innerHTML += listaDeMoeads.map(
+      (moeda) => {
+            return `<option value="${moeda}">${moeda}</option>`;
+        } 
+    );
+    
+    addCurrenciesToSelect("select-entrada");
+    addCurrenciesToSelect("select-saida");
 
-function onChangeSelecionarMoedaEntrada(event){
-    let moeda = event.target.value; 
-    console.log(event.target.value);
-    moedaEntrada = TipodeMoedas[moeda];
-}
-function onChangeSelecionarMoedaSaida(event){
-    let moeda = event.target.value; 
-    console.log(event.target.value);
-    moedaSaida = TipodeMoedas[moeda];
-}
-
-function onChangeInputValue(event){ 
-    ValorAConverter = Number(event.target.value);
-    console.log(event.target.value);
 }
 // Moeda base = real 
 
+function onClickConverter() {
+    // Get Input value
+    const moedaEntrada =
+      TipodeMoedas[document.getElementById("select-entrada").value];
+    const moedaSaida =
+      TipodeMoedas[document.getElementById("select-saida").value];
+    const valorAConverter = Number(document.getElementById("input-value").value);
+
+//conversao
+const convertionRatio = moedaEntrada.valor / moedaSaida.valor;
+const convertedValue = valorAConverter * convertionRatio;
+
 //.valor = atributo da valor da moeda e .type = tipo 'usd , 'brl'
-
-function onClickConverter(){
-    if (moedaEntrada.valor == 1){
-        conversao = (ValorAConverter / moedaSaida.valor);
-        
-    } 
-    else if (moedaSaida.valor == 1){
-
-        conversao = (ValorAConverter * moedaEntrada.valor);
-    }
-    else {
-        conversao = (moedaEntrada.valor * ValorAConverter / moedaSaida.valor);
-    }
-   
   
-    let conversaoDisplay = conversao.toLocaleString('pt-BR', { style: 'currency', currency: moedaSaida.type });
-    console.log(conversao);
-    document.getElementById("ValorConvertido").innerHTML = conversaoDisplay;
+    let conversaoDisplay = convertedValue.toLocaleString('pt-BR', { 
+        style: 'currency', 
+        currency: moedaSaida.type
+     });
+    console.log(convertedValue);
+    document.getElementById("converted-value").innerHTML = conversaoDisplay;
 }
 

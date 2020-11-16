@@ -1,14 +1,6 @@
 
-.pageconteiner {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    
-   
-}
-
 .caixinha {
-    width: 800px;
+    min-width: 300px;
     height: 500px;
     border: 5px solid gray;
     padding: 80px;
