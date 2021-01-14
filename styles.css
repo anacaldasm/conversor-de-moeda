@@ -1,8 +1,38 @@
+.header {
+    font-size: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #152536;
+    font-weight: 600;
+}
 
+.icon {
+    margin-right: 14px; 
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;  
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+}
+#ValorConvertido {
+    text-align: center;
+    margin-top: 50px;
+    display: block;
+}
+
+.bootstrap-name {
+    color: #9B51E0;
+}
 .caixinha {
     min-width: 300px;
     height: 500px;
-    border: 5px solid gray;
     padding: 80px;
     align-content: center;
     margin: auto;
@@ -11,11 +41,4 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align:center;
-    border-radius: 10%;
-}
-
-#ValorConvertido {
-    text-align: center;
-    margin-top: 50px;
-    display: block;
 }
