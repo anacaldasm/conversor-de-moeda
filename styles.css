@@ -1,44 +1,109 @@
-.header {
-    font-size: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #152536;
-    font-weight: 600;
+@import url("https://rsms.me/inter/inter.css");
+
+.container {
+  width: 100%;
+  padding: 80px;
+  align-content: center;
+  text-align: center;
+  padding-top: 34px;
+  padding-right: 97px;
+  padding-left: 97px;
 }
 
-.icon {
-    margin-right: 14px; 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 34px;
+}
+
+.header {
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #152536;
+  font-weight: 700;
+  word-break: break-all;
+  text-align: center;
+}
+
+.wallet-icon {
+  margin-right: 14px;
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: black;  
-    display: flex;   
-    align-items: center;
-    justify-content: center;
-}
-#ValorConvertido {
-    text-align: center;
-    margin-top: 50px;
-    display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
 }
 
-.bootstrap-name {
-    color: #9B51E0;
+.bootstrap-text {
+  color: #9b51e0;
 }
-.caixinha {
-    min-width: 300px;
-    height: 500px;
-    padding: 80px;
-    align-content: center;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align:center;
+
+.bootstrap-icon {
+  color: #9b51e0;
+  margin-left: 10px;
+  width: 24px;
+  height: 26px;
+}
+
+@media screen and (max-width: 600px) {
+  .bootstrap-icon,
+  .wallet-icon,
+  .person-icon {
+    display: none;
+  }
+}
+
+.person-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 7px;
+}
+
+.output-container {
+  display: flex;
+}
+
+.input {
+  width: 180px;
+  height: 36px;
+}
+
+.transfer-icon {
+  margin-right: 36px;
+  margin-left: 36px;
+}
+
+.converted-button {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 16px;
+  line-height: 1;
+  margin-left: 112px;
+}
+
+.output-value {
+  border: 1px solid #54595e;
+  border-radius: 4px;
+  width: 180px;
+  margin: 0 auto;
+  height: 36px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
 }
