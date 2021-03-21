@@ -1,13 +1,16 @@
+@import url('https://rsms.me/inter/inter.css');
+
 .header {
     font-size: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #152536;
-    font-weight: 600;
+    font-weight: bold;
+    font-family:'inter';
 }
 
-.icon {
+.wallet-icon {
     margin-right: 14px; 
 }
 
@@ -20,6 +23,7 @@
     display: flex;   
     align-items: center;
     justify-content: center;
+    font-family: 'inter';
 }
 #ValorConvertido {
     text-align: center;
@@ -29,7 +33,9 @@
 
 .bootstrap-name {
     color: #9B51E0;
+    font-weight:700;
 }
+
 .caixinha {
     min-width: 300px;
     height: 500px;
