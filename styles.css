@@ -1,5 +1,13 @@
 @import url("https://rsms.me/inter/inter.css");
 
+p {
+  word-break: break-word;
+}
+
+select {
+  max-width: 200px;
+}
+
 .container {
   width: 100%;
   padding: 80px;
@@ -15,6 +23,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .subtitle {
@@ -60,11 +69,15 @@
   height: 26px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 770px) {
   .bootstrap-icon,
   .wallet-icon,
   .person-icon {
     display: none;
+  }
+  .form-container {
+    flex-direction: column;
+    padding-bottom: 20px;
   }
 }
 
@@ -93,7 +106,6 @@
   color: white;
   padding: 10px 16px;
   line-height: 1;
-  margin-left: 112px;
 }
 
 .output-value {
@@ -103,7 +115,5 @@
   margin: 0 auto;
   height: 36px;
   align-items: center;
-  display: flex;
   justify-content: center;
-  margin-top: 56px;
 }
